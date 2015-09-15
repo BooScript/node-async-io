@@ -1,0 +1,23 @@
+{
+  "name": "node-async-io",
+  "version": "1.0.0",
+  "description": "Code Wars Node Async-IO Kata",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BooScript/node-async-io.git"
+  },
+  "keywords": [
+    "kata",
+    "node"
+  ],
+  "author": "Tom Chambrier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BooScript/node-async-io/issues"
+  },
+  "homepage": "https://github.com/BooScript/node-async-io#readme"
+}
