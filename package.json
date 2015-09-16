@@ -8,7 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BooScript/node-async-io.git"
+    "url": "git+https://github.com/therewillbecode/node-async-io.git"
+  },
+  "dependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.3.2",
+    "node-inspector": "^0.12.3"
   },
   "keywords": [
     "kata",
@@ -17,7 +22,7 @@
   "author": "Tom Chambrier",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BooScript/node-async-io/issues"
+    "url": "https://github.com/therewillbecode/node-async-io/issues"
   },
-  "homepage": "https://github.com/BooScript/node-async-io#readme"
+  "homepage": "https://github.com/therewillbecode/node-async-io#readme"
 }
