@@ -7,7 +7,7 @@ var main = require('../index.js'); //import main js file
 
 
 
-describe('add', function(){
+describe('run child process', function(){
 
-    expect(main.add(1)).to.be.a('number');
+    expect(main.execute('echo hi')).to.be.a('string');
 });
