@@ -3,19 +3,23 @@ var exec = require('child_process').exec;
 
 module.exports.execute = execute;
 
-function cb(error, stdout, stderr)
+function cb(err, stdout, stderr)
 {
-   if(error){
-       console.log("child process failed with " + stderr);
-       return error;
-   }
-
-console.log(stdout);
-    return 'vm';
+       if(err !== null){
+           console.log("child process failed with " + stderr);
+           return error;
+       }
+       else{
+           console.log(stdout);
+          // return stdout;
+       }
 }
+
 
 function execute(command, callback){
-    return exec(command,callback); //executes child process which runs command and when done calls callback
+  var child = (exec(command,callback)); //executes child process which runs command and when done calls callback
+    //return child;
 }
 
-console.log('returns  ' + execute('echo hi', cb));
+console.log(execute('echo hi tom', cb));
+

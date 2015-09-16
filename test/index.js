@@ -11,20 +11,17 @@ var main = require('../index.js'); //import main js file
 describe('when execute is called with command - echo hi', function(){
 
    it('error should equal null', function(done){
-       main.execute('echo hi', function(err, stdout){
+       main.execute('echo hi', function(err, stdout, stderr){
             expect(err).to.equal(null);
             done();
        })
    });
-
-
 });
 
 
 describe('when execute is called with command - asdf', function(){
-
     it('error should equal null', function(done){
-        main.execute('asdf', function(err, stdout){
+        main.execute('asdf', function(err, stdout, stderr){
             expect(err).not.to.equal(null);
             done();
         })
