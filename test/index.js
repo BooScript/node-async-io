@@ -9,5 +9,5 @@ var main = require('../index.js'); //import main js file
 
 describe('run child process', function(){
 
-    expect(main.execute('echo hi')).to.be.a('string');
+    expect(main.execute('echo hi')).to.be.a('Object');
 });
