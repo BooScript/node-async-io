@@ -7,19 +7,11 @@ function cb(err, stdout, stderr)
 {
        if(err !== null){
            console.log("child process failed with " + stderr);
-           return error;
-       }
-       else{
-           console.log(stdout);
-          // return stdout;
        }
 }
-
 
 function execute(command, callback){
-  var child = (exec(command,callback)); //executes child process which runs command and when done calls callback
-    //return child;
+    exec(command, callback).stdout.pipe(process.stdout); //executes child process which runs command and when done calls callback
 }
 
-console.log(execute('echo hi tom', cb));
-
+execute('echco h', cb);

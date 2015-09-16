@@ -20,7 +20,7 @@ describe('when execute is called with command - echo hi', function(){
 
 
 describe('when execute is called with command - asdf', function(){
-    it('error should equal null', function(done){
+    it('error should not equal null', function(done){
         main.execute('asdf', function(err, stdout, stderr){
             expect(err).not.to.equal(null);
             done();
