@@ -2,12 +2,32 @@
  * Created by Tom on 15/09/2015.
  */
 var expect = require('chai').expect;
+var should = require('chai').should();
 
 var main = require('../index.js'); //import main js file
 
 
 
-describe('run child process', function(){
+describe('when execute is called with command - echo hi', function(){
 
-    expect(main.execute('echo hi')).to.be.a('Object');
+   it('error should equal null', function(done){
+       main.execute('echo hi', function(err, stdout){
+            expect(err).to.equal(null);
+            done();
+       })
+   });
+
+
+});
+
+
+describe('when execute is called with command - asdf', function(){
+
+    it('error should equal null', function(done){
+        main.execute('asdf', function(err, stdout){
+            expect(err).not.to.equal(null);
+            done();
+        })
+    });
+
 });

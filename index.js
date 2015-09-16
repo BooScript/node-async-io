@@ -11,10 +11,11 @@ function cb(error, stdout, stderr)
    }
 
 console.log(stdout);
+    return 'vm';
 }
 
-function execute(command, callback){ //executes child process which runs command and when done calls callback
-    var execChild = exec(command,callback);
+function execute(command, callback){
+    return exec(command,callback); //executes child process which runs command and when done calls callback
 }
 
-execute('echo hi', cb);
+console.log('returns  ' + execute('echo hi', cb));
